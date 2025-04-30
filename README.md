@@ -35,5 +35,5 @@ ffmpeg -i input.mp4 -c:a aac -b:a 128k -vn audio.mp4
 MP4Box -dash 1000 -frag 1000 -rap -segment-name segment_ -out manifest.mpd video.mp4
 ```
 - manifest.mpd
-- init.mp4
-- segment_1.m4s
+- segment_init.mp4
+- segment_*.m4s
