@@ -26,13 +26,9 @@ ffmpeg -i input.mp4 -c:v libx264 -b:v 500k -an video.mp4
 ```
 ffmpeg -i input.mp4 -c:a aac -b:a 128k -vn audio.mp4
 ```
-### ffmpegで音声のみ出力
-```
-ffmpeg -i input.mp4 -c:a aac -b:a 128k -vn audio.mp4
-```
 ### MPEG-DASHに変換
 ```
-MP4Box -dash 1000 -frag 1000 -rap -segment-name segment_ -out manifest.mpd video.mp4
+MP4Box -dash 1000 -frag 1000 -rap -segment-name segment_ -out manifest.mpd video.mp4#video audio.mp4#audio
 ```
 - manifest.mpd
 - segment_init.mp4
