@@ -26,7 +26,7 @@ ffmpeg -i input.mp4 -c:v libx264 -b:v 500k -an video.mp4
 ```
 ffmpeg -i input.mp4 -c:a aac -b:a 128k -vn audio.mp4
 ```
-### MPEG-DASHに変換
+### MPEG-DASHに変換(html/streamを作成して実施)
 ```
 MP4Box -dash 1000 -frag 1000 -rap -segment-name segment_ -out manifest.mpd video.mp4#video audio.mp4#audio
 ```
